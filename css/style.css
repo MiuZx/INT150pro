@@ -1,0 +1,708 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    scroll-margin-top:80px;
+    scroll-behavior: smooth;
+}
+button{
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+}
+/**/
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+
+/*Nav bar*/
+.mainMenuDownNonHover{ /*ทำให้ลูกdropdownเล็ก*/
+    max-width: 20px;
+    max-height: 5px; 
+}
+
+
+/*Nav wrapper*/
+nav{
+
+}
+.contianer-nav{
+    display: flex;
+    background-color: #111;
+    color: white;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid rgba(51, 51, 51, .25);
+    font-size: 14px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    
+    
+}
+.centerbar ,.rightsidebar,.globeIcon ,.burgerNav,.leftsidebar{
+    display: flex;
+    height: 100% ;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    
+}
+
+
+
+    /*Nav bar leftside*/
+.leftsidebar{
+    padding-left: 16px;
+}
+.appswitcher{
+    width: 121px;
+}
+.riotbar-fist-logo{                       /*A Logo wrapper*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    padding: 0%;
+}
+.riotgameslogo{                             /*Riot logo*/
+    display: flex;
+    fill: #f9f9f9;
+    margin-right: auto;
+    width: 95px;
+}
+.mainMenuDownNonHover{                   /*wrapper logodropdown*/
+    display: flex;
+    justify-content: center;
+    width: 26px;
+    height: 7px;
+    margin-left: auto;
+    
+}
+.mainMenuDownNonHover svg{                /*logodropdown*/
+    fill: #7e7e7e;
+    width: 30px;
+    height: 7px;
+    margin-left: auto;
+} 
+a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,a:focus .mainMenuDownNonHover svg {     /*red when hover*/
+    fill: red;
+}
+
+
+
+    /*Nav bar center*/
+.centerbar{
+    width: 100%;
+    margin-left: 28px;
+}
+    /*logo main nav*/
+.LOLLOGO{
+    margin-right: auto;
+}
+.LOLLOGOmini{
+    display: none;
+}
+
+    /*Nav bar rightside*/
+.rightsidebar{
+   
+    margin-left: auto;
+    padding-right:16px ;
+    
+    
+}
+.globeIcon{
+    width: 68px;
+}
+.container-burgermenu{
+ 
+} 
+.burgerNav{
+     
+}
+
+/*main*/
+main{
+    
+
+}
+span{
+    display: flex;
+    flex-direction: column;
+    
+}
+    /*main BG*/
+#letsplay{
+    
+
+    width: 100%;
+    
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    background: linear-gradient(to top, rgb(10, 20, 40) 0%, transparent 100%) center bottom / 100% 50% no-repeat;
+}
+
+.bg{
+    
+    
+   background-color: black;
+    
+}
+.bg video{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100%;
+    overflow: hidden;
+    
+}
+    /*main logo*/
+.overlay{                /*.....................*/
+    position: relative;
+    display: flex;   
+    align-items: center;
+    
+    justify-content: center;
+    height: 100%;
+}
+.League-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.League-logo a img {
+    width: 300px;
+    height: 129px;
+}
+
+.button-letplay{
+    margin-top:48px;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 19px 32px;
+    background-color: #c9a96f;
+}
+.League-logo .button-letplay{
+    color: black;
+    margin-top:32px;
+    outline: rgb(255, 255, 255) solid 1px;       /*เส้นนอกborder*/
+    outline-offset: 3px;                            /*ระยะห่างระหว่างborder -> เส้นนอกborder*/
+    line-height: 26px;
+    
+}
+
+    /*season*/
+#season{
+    display: flex;
+    height: 640px;
+    overflow: hidden;
+    position: relative;
+    
+}
+#season .bg-img{
+    background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d07912c88cdcd3c15298e88cedd2bb801528a305-1680x560.jpg?auto=format&fit=fill&q=80&h=560');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    
+    
+    
+}
+
+.bg-img p{
+    color:#f9f9f9;
+    font-family: 'Beaufort for LOL', sans-serif;
+    
+    
+}
+.overlay-season{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    text-align: left;
+    position: absolute;
+    padding-left: 50px;
+}
+.supertitle{
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    font-style: italic;
+    
+    
+}
+.title{
+    font-weight: 700;
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-style: italic;
+    overflow-wrap: break-word;
+    
+    
+}
+.description{
+    margin-bottom: 32px;
+    font-style: none ;
+    font-family: Spiegel, sans-serif ;
+    font-size: 18px;
+}
+.button-watch{
+    display: flex;
+    width: fit-content;
+    color: #000;
+    padding: 19px 32px;
+    background-color: #c9a96f;
+    
+}
+
+
+
+/*news*/
+#news{
+    display: flex;
+    flex-direction: column;
+    margin: 48px;
+    background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/4c59eeaf4adc540fd42745bd5c71563fba8f6288-3840x1328.png?auto=format&fit=fill&q=80&w=1530);
+}
+
+.news-header{
+    font-size: 32px;
+    line-height: 40px;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    
+}
+.news-content-container{
+    display: flex;
+    padding:32px 0;
+    flex-direction: row;
+   
+    width: 100%;
+}
+
+.wrapper{
+    
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    
+    
+    
+    
+}
+.wrapper li {
+   flex: 1 0 auto;
+   width: 33.3%;
+}
+    /*card*/
+.card{
+    background-color: #f9f9f9;
+    overflow: hidden;
+    
+}
+.card-newsvideo {
+
+    overflow: hidden;
+}
+
+.card-newsvideo img{
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover .card-newsvideo img{
+    transform: scale(1.1);
+    
+}
+
+    
+
+.card-header{
+    display: flex;
+    font-family: Spiegel, sans-serif;
+    font-weight: 400;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #000;
+}
+.card-newsbody{
+    color: #000;
+}   
+.card-supertitle{
+   
+    font-weight: bold;
+    color: #C8AA6C;
+}
+.card-supertitle,.card-date{
+    font-size: 14px;
+    line-height: 16px;
+}
+.stick{                            /*.....................*//*.....................*//*.....................*//*.....................*/
+    background-color: rgb(204, 204, 204);
+    margin: 0px 8px;
+    
+}
+
+.card-title{
+    white-space: normal;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: rgb(10, 20, 40);
+}
+.card-description{
+    white-space: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+.arrow-btn{
+   visibility: hidden;
+}
+
+
+
+/*icon champion*/
+#champions{
+    padding: 24px;
+}
+.icon-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.icon-header .supertitle{
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+   
+}
+.icon-header .title{
+    font-size: 48px;
+    
+}
+.icon-link {
+    display: flex;
+    justify-content: center;         /*สำรวจแชมเปี้ยนตัวอื่น ๆ*/
+    gap:16px;
+    width: 100%;
+    
+}
+.icon-link .button-watch ~ .button-watch{
+    background-color: #59C1DE;                       /*เล่นเลย*/
+}
+
+
+.icontab-content{
+   width: 100%;
+   border: 1px solid red;
+}
+.icon-scoll-tab{
+    
+    border: 1px solid red;
+}
+.iconwrapper{
+    
+    
+    display:flex;
+    gap:8px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    
+}
+.iconwrapper .champ-card-icon{
+    display: flex;
+    border: 1px solid red;
+    scroll-snap-align: start;
+    filter: brightness(50%);
+    flex-direction: column;
+    align-items: center;      /*label มาอยู่ตรงกลางicon*/
+  
+}
+
+.iconwrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.champ-card-icon:active {
+    filter: brightness(50%);
+}
+.icon-champ{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+     width: 132px;
+    height: 72px;
+    
+}
+.label-champ{
+    padding-top: 8px;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    #letsplay{
+    height: 580px
+    }
+
+    .League-logo a img {
+        max-width: 340px;
+    }
+     .League-logo .button-letplay{
+        margin-top:32px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    /*season*/
+     #season{
+        height: 440px;
+     }
+    .overlay-season{
+        width: 100%;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .supertitle{
+    font-size: 20px;
+    
+    }
+    .title{
+    font-size: 32px;
+    }
+    /*news*/
+    #new{
+        margin: 32px;
+    }
+    .news-content-container{
+        display: flex;
+        flex-direction: column;
+        padding:24px 0;
+    }
+    .news-content{
+        overflow: hidden;
+        overflow-x: scroll;
+        width: 100%;
+        scroll-snap-type: x mandatory;
+    }
+    .news-content::-webkit-scrollbar{
+        display: none;
+    }
+    .wrapper{
+
+
+        white-space: nowrap;
+    }
+    .wrapper li{
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        transition: all 0.2;
+        width: 48%;
+        flex-shrink: 0;
+    }
+   
+    .card-newsvideo img{
+        
+        width: 100%;
+    }
+    .news-header{
+    font-size: 24px;
+   
+    }
+
+    .card-supertitle{
+        font-weight: bold;
+        color: #C8AA6C;
+    }
+    .card-supertitle ,.card-date{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .stick{
+        background-color: rgb(204, 204, 204);
+        margin: 0px 8px;
+        
+    }
+    .card-title{
+       
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+    .card-description{
+        
+        font-size: 14px;
+        line-height: 22px;
+        
+    }
+    /* scroll indicator */
+
+    .control-contianer{
+        margin-top: 24px; 
+        height: 34.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        
+        
+    }
+    .progress-container {
+    width: 85%;
+    flex: 1 1 0%;
+  
+    height: 2px;
+    background: #ccc;
+    
+    
+    }
+
+    .progress-bar {
+    height: 2px;
+    background: rgb(200, 170, 110);
+    width: 0%;
+    }
+    .arrow-btn{
+        
+    }
+    .arrow-btn button {
+    
+    visibility: visible;
+    background: none;
+    border: none;
+    cursor: pointer;
+    fill: #c9a96f;
+    gap: 8px;
+    }
+    .arrow-btn button.disabled {
+    fill: #cccccc; 
+    cursor: not-allowed; 
+    }
+    .arrow-btn .arrow-btn-left{
+       
+       margin-right: 8px;
+    }
+}  
+   
+
+
+
+@media (max-width: 600px) {
+    
+    .League-logo a img {
+        max-width: 238px;
+        max-height: 102px;
+    }
+    .League-logo .button-letplay{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .League-logo .button-letplay{
+        margin-top:24px;
+    }
+
+
+    /*season*/
+    
+    .overlay-season{
+        width: 100%;
+       
+    }
+    .title{
+        font-size: 38px;
+    }
+    .description{
+        font-size: 14px;
+    }
+    .button-watch{
+        font-size: 14px; 
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+
+    /*news*/
+    #news{
+        margin: 24px;
+    }
+    .news-header{
+    font-size: 24px;
+    line-height: 32px;
+    }
+    .news-content-container{
+        padding:24px 0;
+    }
+    .card-supertitle{
+        font-weight: bold;
+        color: #C8AA6C;
+    }
+    .card-supertitle,.card-date{
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .stick{
+        background-color: rgb(204, 204, 204);
+        margin: 0px 8px;
+        
+    }
+    .card-title{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+    .card-description{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .wrapper{
+        white-space: nowrap;
+    }
+    .wrapper li{
+        width: 100%;
+       
+    }
+    .progress-container {
+        width: 85%;
+    }
+    /*champion*/
+    .icon-link {
+    display: flex;
+    flex-direction: column;                         /*สำรวจแชมเปี้ยนตัวอื่น ๆ*/
+    gap:16px;
+    width: 100%;
+    }
+}
+/*footer*/
