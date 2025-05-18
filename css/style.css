@@ -20,6 +20,17 @@ a{
 img{
     display: block;
 }
+/*hover*/
+.button-watch:hover{
+    filter: brightness(110%); 
+             
+}
+.nav-btn:hover a{
+    filter: brightness(90%);
+    color:rgb(212, 189, 143);
+}
+
+
 
 /*Nav bar*/
 .mainMenuDownNonHover{ /*ทำให้ลูกdropdownเล็ก*/
@@ -29,8 +40,28 @@ img{
 
 
 /*Nav wrapper*/
-nav{
-
+.nav-link-dropdown li a, .nav-link li a{
+    color: white;
+    padding: 7.5px 16px;
+    margin-right: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: .08em;
+    text-align: center;
+}
+.nav-link-dropdown{
+    display: flex;
+}
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+    height: 100%;
+    align-items: center;
+}
+.nav-link-wrap{
+    display: none;
 }
 .contianer-nav{
     display: flex;
@@ -56,25 +87,33 @@ nav{
     
 }
 
-
+.drop-down-icon{
+    margin-left: 4px;
+}
+.arw-add{
+    margin-left: 4px;
+    height: 100%;
+}
+.nav-link li 
 
     /*Nav bar leftside*/
 .leftsidebar{
-    padding-left: 16px;
+    padding-left: 38px;
 }
 .appswitcher{
-    width: 121px;
+    width: 140px;
 }
 .riotbar-fist-logo{                       /*A Logo wrapper*/
     display: flex;
     align-items: center;
     justify-content: space-around;    
-    padding: 0%;
+   
+    
 }
 .riotgameslogo{                             /*Riot logo*/
     display: flex;
     fill: #f9f9f9;
-    margin-right: auto;
+    margin-left: 36px;
     width: 95px;
 }
 .mainMenuDownNonHover{                   /*wrapper logodropdown*/
@@ -82,14 +121,14 @@ nav{
     justify-content: center;
     width: 26px;
     height: 7px;
-    margin-left: auto;
+    margin-right: auto;
     
 }
 .mainMenuDownNonHover svg{                /*logodropdown*/
+    width: 20px;
+    height: 5px;
     fill: #7e7e7e;
-    width: 30px;
-    height: 7px;
-    margin-left: auto;
+    margin-right: auto;
 } 
 a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,a:focus .mainMenuDownNonHover svg {     /*red when hover*/
     fill: red;
@@ -100,32 +139,95 @@ a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,
     /*Nav bar center*/
 .centerbar{
     width: 100%;
-    margin-left: 28px;
+    margin-left: 22px;
+    display: flex;
+    justify-content: flex-start;
 }
     /*logo main nav*/
 .LOLLOGO{
-    margin-right: auto;
+   display: none;
 }
 .LOLLOGOmini{
-    display: none;
+    display: block;
+    
 }
-
+.LOLLOGOmini svg{
+    width: 25px;
+    margin-right: 8px;
+}
+.nav-link{
+    gap: 2px;
+}
+.nav-link  a{                                           /*a ใน nav*/
+    
+    position: relative;                             /*pos ให้ เส้นใต้อิงอันนี้*/
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: .08em;
+   
+}
+.nav-link  a p,.nav-link .nav-link-dropdown p {
+    padding: 7.5px 16px;
+    
+}
+.nav-link  a:hover p,.nav-link .nav-link-dropdown:hover p{
+    background-color: #292929;
+    border-radius: 6px;
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98), border-color .5s cubic-bezier(0.06, 0.81, 0, 0.98);
+    color:rgb(212, 189, 143);
+    
+}
+.nav-link  a:hover  .nav-item-underline {
+    position: absolute;                       /*pos ให้ เส้นใต้ตามอันบนอันนี้*/
+    background-color: rgb(0,160,189);
+    border-radius: 0 0 8px 8px;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    bottom: 6px;
+}
     /*Nav bar rightside*/
 .rightsidebar{
-   
+    display: flex;
     margin-left: auto;
     padding-right:16px ;
-    
+    flex-direction: row;
     
 }
 .globeIcon{
-    width: 68px;
+    height: 32px;
+    width: 32px;
+    margin: 6px;
 }
-.container-burgermenu{
- 
-} 
+.globeIcon svg{
+    width: 18px;
+}
+.globeIcon:hover{
+    border-radius: 6px;
+    background-color: #292929;
+}
 .burgerNav{
-     
+    display: none;
+}
+.nav-btn {
+    width: 91px;
+}
+.nav-btn a{
+    display: flex;
+    justify-content: center;
+    padding:8px 16px;
+    color: black;
+    background-color: #0BC4E2;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98);
 }
 
 /*main*/
@@ -140,10 +242,7 @@ span{
 }
     /*main BG*/
 #letsplay{
-    
-
     width: 100%;
-    
     height: 640px;
     display: flex;
     justify-content: center;
@@ -212,8 +311,9 @@ span{
     height: 640px;
     overflow: hidden;
     position: relative;
-    
+    align-items: center;
 }
+
 #season .bg-img{
     background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d07912c88cdcd3c15298e88cedd2bb801528a305-1680x560.jpg?auto=format&fit=fill&q=80&h=560');
     position: relative;
@@ -243,7 +343,7 @@ span{
     width: 50%;
     text-align: left;
     position: absolute;
-    padding-left: 50px;
+    padding-left: max(50px,5%);
 }
 .supertitle{
     margin-bottom: 8px;
@@ -274,20 +374,23 @@ span{
     color: #000;
     padding: 19px 32px;
     background-color: #c9a96f;
-    
+    transition: all 0.2s ease-in-out;    
 }
 
 
 
 /*news*/
-#news{
+ #news{
     display: flex;
     flex-direction: column;
+    align-self: center;
     margin: 48px;
-    background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/4c59eeaf4adc540fd42745bd5c71563fba8f6288-3840x1328.png?auto=format&fit=fill&q=80&w=1530);
+   
+    
 }
 
 .news-header{
+    
     font-size: 32px;
     line-height: 40px;
     word-break: break-word;
@@ -300,7 +403,6 @@ span{
     display: flex;
     padding:32px 0;
     flex-direction: row;
-   
     width: 100%;
 }
 
@@ -390,7 +492,8 @@ span{
 
 /*icon champion*/
 #champions{
-    padding: 24px;
+    padding: 48px;
+    /* margin:0 5%;  1920width */
 }
 .icon-header{
     display: flex;
@@ -399,56 +502,74 @@ span{
     text-align: center;
     margin-bottom: 24px;
 }
+
 .icon-header .supertitle{
     font-style: normal;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
-   
+    line-height: 28px;
+    color: rgb(10, 20, 40);
 }
 .icon-header .title{
-    font-size: 48px;
-    
+    font-size: 66px;
+    color: rgb(10, 20, 40);
+}
+.icon-header .description{
+    font-size: 20px;
+    line-height: 26px;
+    color: rgb(10, 20, 40);
 }
 .icon-link {
     display: flex;
     justify-content: center;         /*สำรวจแชมเปี้ยนตัวอื่น ๆ*/
     gap:16px;
     width: 100%;
-    
+    margin-bottom: 48px;
+    font-size: 20px;
 }
 .icon-link .button-watch ~ .button-watch{
+    padding: 19px 32px;
     background-color: #59C1DE;                       /*เล่นเลย*/
 }
 
+.icon-tab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tabs media";
+    
+    gap: 32px;
+    padding: 0 auto;
+}
 
+.icon-header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .icontab-content{
    width: 100%;
-   border: 1px solid red;
+
 }
 .icon-scoll-tab{
     
-    border: 1px solid red;
+  
 }
 .iconwrapper{
-    
-    
     display:flex;
-    gap:8px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    width: 100%;
-    
+    gap: 8px;
 }
 .iconwrapper .champ-card-icon{
     display: flex;
-    border: 1px solid red;
+    
     scroll-snap-align: start;
     filter: brightness(50%);
     flex-direction: column;
     align-items: center;      /*label มาอยู่ตรงกลางicon*/
-  
+    height: 110px;
+    width: 100%;
+    
 }
+
 
 .iconwrapper::-webkit-scrollbar{
     display: none;
@@ -457,20 +578,308 @@ span{
 .champ-card-icon:active {
     filter: brightness(50%);
 }
-.icon-champ{
-    flex: 1 1 100%;
+.icon-champ img{
     display: flex;
     justify-content: center;
-     width: 132px;
-    height: 72px;
+    width: 100%;  
+   
+}
+
+.label-champ{                       /* texticonchamp */
+    margin-top: 24px;
+   
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.icon-media-content{
+    display: flex;
+    justify-content: center;
+    
     
 }
-.label-champ{
-    padding-top: 8px;
+.icon-media-content img{
+    display:flex;
+    max-height: 736px;
+    max-width: 736px;
+    flex: 1 0 auto;
+}
+.icon-media-lebelwarp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icon-media-lebel{
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(10, 20, 40);
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+.icon-media-des{
+    font-family: Spiegel, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: rgb(108, 114, 126);
+    margin-bottom: 4px;
+}
+
+/*promote*/
+#MediaPromote{
+    background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/a6f94cd5ed222d3b99e535f17cd9592d3c716bb5-3840x1616.png?auto=format&fit=fill&q=80&h=976);
+    object-fit: cover;
+    background-position: 50% 5%;
+    /* padding:0 5%; 1920width */
+    bottom: 50%;
+}
+.MediaproWrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(to top, rgb(10, 20, 40) 0%, transparent 100%) center bottom / 100% 50% no-repeat;
+    gap: 64px;
+}
+
+.promo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.promo-container .supertitle,.promo-container .title,.promo-container .description{
+    color: white;
+}
+.promo-container .supertitle{
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 32px;
+}
+.promo-container .title{
+    margin-bottom: 16px;
+    font-size: 80px;
+    line-height: 88px;
+}
+.promo-container .description{
+    margin-bottom: 48px;
+}
+.promo-container .button-watch{
+    margin-bottom: 76px;
+    font-size: 18px;
+    line-height: 26px;
+    
 }
 
 
+.Media{
+    display: flex;
+}
+.promo-media-content{
+    display: flex;
+}
+.promo-media-content img{
+    display: flex;
+    width: 100%;
+}
+/*map */
+#map{
+    background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/0eb5bc3bbb7794eceea3a5e7948906e1cbcd027f-5120x1810.png?auto=format&fit=fill&q=80&w=1850);   
+    background-size: cover;
+}
+.layoutmap{
+    background: linear-gradient(to bottom, rgb(10, 20, 40) 0%, transparent 100%) center top / 100% 50% no-repeat;
+   
+}
+.mapwraper{
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     gap: 16px;
+    align-items: center;
+     margin: 0 10%;
+}
 
+.map-container{
+   
+}
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding: 24px;
+    
+}
+.title-container .supertitle{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 32px;
+}
+.title-container .title{
+    font-size: 64px;
+    line-height: 72px;
+}
+.title-container a{
+    margin-top: 32px;
+}
+
+.map-icon-container{
+ 
+
+}
+.map-content{                  /* OL map */
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+    width: 100%;
+    gap:8px;
+    margin-top: 32px;
+}
+.map-icon{                      /* li map */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 132px;
+}
+.map-icon img {                 /*  map icon */
+    width: 68px;
+    height: 68px;
+}
+.map-icon .icon-media-lebel{     /*  map icon lebel */
+    color: white;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    font-family: Spiegel, sans-serif;
+    margin: 0;
+    margin-top: 8px;
+    text-align: center;
+    
+}
+
+.media-map{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.media-map-video{
+    clip-path: circle(50%);
+    width: 686px;
+    border-radius: 50%;
+    border: 1px solid rgb(200, 170, 110);
+    padding: 8px;
+    margin-bottom: 48px ;
+}
+.media-map p{
+    color: white;
+    text-align: center;
+    
+}
+.media-map .icon-media-lebel{
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.media-map .icon-media-des{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+/*Last promote*/
+.bg-last video{             /*bg video*/
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    z-index: -1000;
+}
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+}
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 48px;
+    background-color: #111111;
+    
+}
+.link-footer-wrap,.footer-riot-logo,.license{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.footer-bar .link-footer-wrap{       /* first footer-bar*/
+    padding: 24px ;
+    background-color: #292929;
+}
+
+.footer-bar-icon .link-footer-wrap{      /* icon footer-bar*/
+    padding: 18px;
+    fill: white;
+    fill-rule: evenodd;
+    
+}
+.about-footer-icon  {
+    background: rgba(128, 128, 128, .2);
+    border-radius: 12px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+}
+.footer-riot-logo{                       /* logo footer-bar*/
+    padding:24px 0 20px;
+    fill: #737373;
+}
+.license{                                    /* liscense footer-bar*/
+    max-width: 640px;
+    color: #7e7e7e; 
+    text-align: center;
+    display: flex;
+    align-self: center;
+    
+}
+
+.license ~ .footer-bar  .link-footer-wrap{           /* lastfooter-bar*/
+    padding: 24px 0 28px;
+    background-color: #111111;
+}
+.about-footer a {                       /* text footer-bar*/
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: .08em;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    display: block;
+   
+   
+}
 
 @media (max-width: 1024px) {
     #letsplay{
@@ -505,6 +914,7 @@ span{
     /*news*/
     #new{
         margin: 32px;
+        
     }
     .news-content-container{
         display: flex;
@@ -521,8 +931,6 @@ span{
         display: none;
     }
     .wrapper{
-
-
         white-space: nowrap;
     }
     .wrapper li{
@@ -569,7 +977,7 @@ span{
     }
     /* scroll indicator */
 
-    .control-contianer{
+    .control-contianer{                    /* กล่องcontrol */
         margin-top: 24px; 
         height: 34.5px;
         display: flex;
@@ -579,7 +987,7 @@ span{
         
         
     }
-    .progress-container {
+    .progress-container {               /* หลอดcontrol */
     width: 85%;
     flex: 1 1 0%;
   
@@ -589,15 +997,13 @@ span{
     
     }
 
-    .progress-bar {
+    .progress-bar {                      /* หลอดcontrolทับ */
     height: 2px;
     background: rgb(200, 170, 110);
     width: 0%;
     }
-    .arrow-btn{
-        
-    }
-    .arrow-btn button {
+   
+    .arrow-btn button {      /* ลูกศรcontrolทับ */
     
     visibility: visible;
     background: none;
@@ -621,10 +1027,60 @@ span{
 
 @media (max-width: 600px) {
     
+    .leftsidebar{
+    padding-left: 16px;
+    }
+    .appswitcher{
+        width: 121px;
+    }
+    .riotgameslogo{                             /*Riot logo*/
+    display: flex;
+    fill: #f9f9f9;
+    margin-left: 0px;
+    
+    }
     .League-logo a img {
         max-width: 238px;
         max-height: 102px;
     }
+    .riotgameslogo{                             /*Riot logo*/
+    width: 95px;
+    margin-right: 8px;
+    }
+    .mainMenuDownNonHover svg{                /*logodropdown*/
+    width: 30px;
+    height: 7px;
+    margin-left: auto;
+    } 
+    .centerbar{
+    margin-left: 28px;
+    }
+    .LOLLOGO{
+    display: block;
+    }
+    .LOLLOGOmini{
+    display: none;
+    }
+    .nav-link{
+        display: none;
+    }
+    .rightsidebar{
+    display: flex;
+    margin-left: auto;
+    padding-right:16px ;
+    flex-direction: row;
+
+    }
+    .burgerNav{
+    display: flex;
+    }
+    .nav-btn{
+    display: none;
+    }
+
+
+
+
     .League-logo .button-letplay{
         font-size: 14px;
         line-height: 22px;
@@ -697,12 +1153,193 @@ span{
     .progress-container {
         width: 85%;
     }
+
+
+
+
+
+
+
+
     /*champion*/
+    #champions{
+    padding: 24px;
+    }
+    .icon-tab{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    }
+    .icon-header .supertitle{
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+   
+    }
+    .icon-header .title{
+        font-size: 48px;
+        
+    }
+    .icon-header .description{
+        font-size: 18px;
+        line-height: 26px;
+        color: rgb(10, 20, 40);
+    }
     .icon-link {
     display: flex;
     flex-direction: column;                         /*สำรวจแชมเปี้ยนตัวอื่น ๆ*/
     gap:16px;
     width: 100%;
+    margin-bottom: 24px;
+    }
+    .iconwrapper{
+    gap:8px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+   
+    height: 72px;
+     
+    
+    }
+     .iconwrapper .champ-card-icon{                                 /* กล่องiconchamp */
+                                                                        
+
+    max-width: calc(((100% - (8px * calc(4 - 1))) / (1 * 4)));
+    min-width: calc(((100% - (8px * calc(4 - 1))) / (1 * 4)))
+    }
+    .icon-champ img{                                                   /* ภาพiconchamp */
+    display: flex;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    }
+    .label-champ{                                                      /* texticonchamp */
+    margin-top: 8px;
+    padding: 0;
+    font-size: 10px;
+    }
+
+
+    .icon-media-lebel{                                                    /* media textใหญ่ */
+    line-height: 28px;
+    font-size: 20px;
+    }
+    .icon-media-des{                                                
+    font-size: 12px;
+    line-height: 18px;
+    }
+    /*promote*/
+    .MediaproWrapper{                                                    /* wrapper promo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;  
+    gap: 32px;  
+    }
+    .promo-container .supertitle{
+    margin-bottom: 8px;
+    font-size:  20px;
+    line-height: 28px;
+    }
+    .promo-container .title{
+    margin-bottom: 16px;
+    font-size:  56px;
+    line-height: 64px;
+    }
+    .promo-container .description{
+    font-size:  14px;
+    line-height: 22px;
+    }
+    /*map */
+    #map{
+       
+    }
+    .layoutmap{
+         
+    padding: 24px;
+    }
+    .mapwraper{
+        display: flex;
+    flex-direction: column;
+    
+    }
+    .title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding: 24px;
+    
+    }
+    .title-container .supertitle{
+    font-size: 16px;
+    line-height: 24px;
+    }
+    .title-container .title{
+    font-size: 48px;
+    line-height: 56px;
+    }
+    .map-content{
+    gap:16px;
+    margin-top: 16px;
+    }
+    .map-icon{                      /* li map */
+    width: 132px;
+    }
+    .map-icon img {                 /*  map icon */
+    width: 48px;
+    height: 48px;
+    }
+    .map-icon .icon-media-lebel{     /*  map icon lebel */
+    font-size: 10px;
+    font-weight: 500;
+    }
+    .media-map-video{
+    width: 530px;
+    padding: 8px;
+    margin-bottom: 24px ;
+    }
+    .media-map .icon-media-lebel{
+    font-size: 20px;
+    line-height: 28px;
+    }
+    .media-map .icon-media-des{
+        font-size: 14px;
+        line-height: 22px;
+        
+    }
+    /*Last promote*/
+    .bg-last video{             /*bg video*/
+    width: 100%;
+    height: 440px;
+    }
+    .btn-wrapper{
+    height: 440px;
+    }
+    .btn-wrapper a{
+    width: fit-content;
+    }
+    /*footer*/
+    .footer-bar .link-footer-wrap{
+        flex-direction: column;
+    }
+    .about-footer{
+        margin: 12px 0;
+    }
+    .license{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 140%;
+    width: 368px;
+    }
+    .about-footer-icon {
+        width: 48px;
+        height: 48px;
+    }
+    .about-footer-icon a svg{        
+        width: 24px;
+        height: 24px;
     }
 }
-/*footer*/
