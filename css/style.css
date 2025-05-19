@@ -30,6 +30,9 @@ img{
     color:rgb(212, 189, 143);
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
 
 
 /*Nav bar*/
@@ -381,14 +384,9 @@ span{
 
 /*news*/
  #news{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin: 48px;
-   
-    
+    background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/4c59eeaf4adc540fd42745bd5c71563fba8f6288-3840x1328.png?auto=format&fit=fill&q=80&w=1920);
+    padding: 48px;
 }
-
 .news-header{
     
     font-size: 32px;
@@ -404,6 +402,7 @@ span{
     padding:32px 0;
     flex-direction: row;
     width: 100%;
+    
 }
 
 .wrapper{
@@ -492,8 +491,21 @@ span{
 
 /*icon champion*/
 #champions{
+    background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/2037fa505fd6b830ad9212f57865bbf49014e2e3-656x656.png?auto=format&fit=fill&q=80&w=656);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 48px;
+    
     /* margin:0 5%;  1920width */
+}
+.icon-tab{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tabs media";
+    
+    gap: 32px;
+    padding: 0 auto;
 }
 .icon-header{
     display: flex;
@@ -532,14 +544,6 @@ span{
     background-color: #59C1DE;                       /*เล่นเลย*/
 }
 
-.icon-tab{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "tabs media";
-    
-    gap: 32px;
-    padding: 0 auto;
-}
 
 .icon-header{
     display: flex;
@@ -551,7 +555,7 @@ span{
 
 }
 .icon-scoll-tab{
-    
+
   
 }
 .iconwrapper{
@@ -573,6 +577,7 @@ span{
 
 .iconwrapper::-webkit-scrollbar{
     display: none;
+    visibility: hidden;
 }
 
 .champ-card-icon:active {
@@ -1112,9 +1117,10 @@ footer{
 
     /*news*/
     #news{
-        margin: 24px;
+        padding: 24px;
     }
     .news-header{
+        
     font-size: 24px;
     line-height: 32px;
     }
@@ -1164,6 +1170,7 @@ footer{
     /*champion*/
     #champions{
     padding: 24px;
+    
     }
     .icon-tab{
     display: flex;
@@ -1197,11 +1204,9 @@ footer{
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-   
     height: 72px;
-     
-    
     }
+
      .iconwrapper .champ-card-icon{                                 /* กล่องiconchamp */
                                                                         
 
