@@ -21,7 +21,7 @@ img{
     display: block;
 }
 /*Nav hover*/
-.button-watch:hover ,.button-watch:focus{
+.button-watch:hover ,.button-watch:focus, .about-footer:hover a {
     filter: brightness(110%); 
              
 }
@@ -212,11 +212,14 @@ a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,
             line-height: 16px;
             text-align: left;
         }
-        .nav-link-wrap li:hover a, .nav-link-wrap li:focus a{
+        .nav-link-wrap li:hover a, .nav-link-wrap li:focus a,.about-footer:hover{
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
             filter: brightness(100%);
             
+        }
+        .about-footer:hover{
+            transition: all 0.2s linear;
         }
     /*Nav bar rightside*/
 .rightsidebar{          
@@ -595,7 +598,7 @@ span{
     width: 100%;
     
 }
-.champ-card-icon:hover, .map-icon:hover .champ-card-icon:focus, .map-icon:focus{                             /*icon:hover*/
+.champ-card-icon:hover, .map-icon:hover ,.champ-card-icon:focus, .map-icon:focus{                             /*icon:hover*/
     display: flex;
     transition: all 0.2s ease-in;
     transform: scale(1.1);
@@ -1358,7 +1361,7 @@ footer{
         width: 48px;
         height: 48px;
     }
-    .about-footer-icon a svg{        
+    .about-footer-icon a svg{  
         width: 24px;
         height: 24px;
     }
