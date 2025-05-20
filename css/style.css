@@ -20,104 +20,70 @@ a{
 img{
     display: block;
 }
-/*hover*/
-.button-watch:hover{
+/*Nav hover*/
+.button-watch:hover ,.button-watch:focus{
     filter: brightness(110%); 
              
 }
-.nav-btn:hover a{
+.nav-btn:hover a,.nav-btn:focus a{
     filter: brightness(90%);
     color:rgb(212, 189, 143);
 }
 
-::-webkit-scrollbar{
+*::-webkit-scrollbar{
     display: none;
 }
-
+.news-lay,.championsLayout,.layoutmap{
+    padding: 0 2%;
+}
 
 /*Nav bar*/
-.mainMenuDownNonHover{ /*ทำให้ลูกdropdownเล็ก*/
-    max-width: 20px;
-    max-height: 5px; 
-}
+    /*Nav wrapper*/
+    .contianer-nav{
+        position: sticky;
+        display: flex;
+        align-items: center;
+        background-color: #111;
+        width: 100%;
+        height: 80px;
+        color: white;
+        border-bottom: 2px solid rgba(51, 51, 51, .25);
+        font-size: 14px;
+        top: 0;
+        z-index: 10000;
+    }
+    .centerbar ,.rightsidebar,.globeIcon ,.burgerNav,.leftsidebar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        height: 100% ;
+    }
+    .drop-down-icon{
+        margin-left: 4px;
+    }
+    .arw-add{
+        margin-left: 4px;
+        height: 100%;
+    }
 
-
-/*Nav wrapper*/
-.nav-link-dropdown li a, .nav-link li a{
-    color: white;
-    padding: 7.5px 16px;
-    margin-right: 4px;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 120%;
-    letter-spacing: .08em;
-    text-align: center;
-}
-.nav-link-dropdown{
-    display: flex;
-}
-.nav-link {
-    display: flex;
-    flex-direction: row;
-    margin-left: 18px;
-    height: 100%;
-    align-items: center;
-}
-.nav-link-wrap{
-    display: none;
-}
-.contianer-nav{
-    display: flex;
-    background-color: #111;
-    color: white;
-    align-items: center;
-    height: 80px;
-    border-bottom: 2px solid rgba(51, 51, 51, .25);
-    font-size: 14px;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-    
-    
-}
-.centerbar ,.rightsidebar,.globeIcon ,.burgerNav,.leftsidebar{
-    display: flex;
-    height: 100% ;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    
-}
-
-.drop-down-icon{
-    margin-left: 4px;
-}
-.arw-add{
-    margin-left: 4px;
-    height: 100%;
-}
-.nav-link li 
 
     /*Nav bar leftside*/
 .leftsidebar{
     padding-left: 38px;
 }
 .appswitcher{
-    width: 140px;
+    width: 110px;
 }
 .riotbar-fist-logo{                       /*A Logo wrapper*/
     display: flex;
     align-items: center;
-    justify-content: space-around;    
-   
-    
 }
 .riotgameslogo{                             /*Riot logo*/
     display: flex;
     fill: #f9f9f9;
-    margin-left: 36px;
-    width: 95px;
+   margin-right: auto;
+    width: 85px;
 }
 .mainMenuDownNonHover{                   /*wrapper logodropdown*/
     display: flex;
@@ -131,7 +97,7 @@ img{
     width: 20px;
     height: 5px;
     fill: #7e7e7e;
-    margin-right: auto;
+    
 } 
 a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,a:focus .mainMenuDownNonHover svg {     /*red when hover*/
     fill: red;
@@ -146,75 +112,154 @@ a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,
     display: flex;
     justify-content: flex-start;
 }
-    /*logo main nav*/
+/*logo main nav*/
 .LOLLOGO{
-   display: none;
+    display: none;
 }
 .LOLLOGOmini{
     display: block;
-    
 }
 .LOLLOGOmini svg{
     width: 25px;
     margin-right: 8px;
 }
-.nav-link{
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    margin-left: 18px;
+    height: 100%;
+    align-items: center;
     gap: 2px;
 }
 .nav-link  a{                                           /*a ใน nav*/
-    
     position: relative;                             /*pos ให้ เส้นใต้อิงอันนี้*/
     height: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     color: white;
     font-size: 13px;
     font-weight: 600;
     line-height: 120%;
     letter-spacing: .08em;
-   
 }
-.nav-link  a p,.nav-link .nav-link-dropdown p {
+.nav-link  a p,.nav-link .nav-link-dropdown p {         
     padding: 7.5px 16px;
     
 }
-.nav-link  a:hover p,.nav-link .nav-link-dropdown:hover p{
+.nav-link  a:hover p,.nav-link .nav-link-dropdown:hover p,.nav-link  a:focus p,.nav-link .nav-link-dropdown:focus {
     background-color: #292929;
     border-radius: 6px;
     transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98), border-color .5s cubic-bezier(0.06, 0.81, 0, 0.98);
     color:rgb(212, 189, 143);
     
 }
-.nav-link  a:hover  .nav-item-underline {
+.nav-link  a:hover  .nav-item-underline ,.nav-link  a:focus  .nav-item-underline{ /*Nav underline*/
     position: absolute;                       /*pos ให้ เส้นใต้ตามอันบนอันนี้*/
     background-color: rgb(0,160,189);
-    border-radius: 0 0 8px 8px;
     height: 4px;
     width: 100%;
     border-radius: 2px;
     bottom: 6px;
 }
+
+        /*dropdown*/
+    .nav-link-dropdown li a, .nav-link li a{
+        color: white;
+        padding: 7.5px 16px;
+        margin-right: 4px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: .08em;
+        text-align: center;
+        }
+    .nav-link-wrap{
+            display: none;
+        }
+    .nav-link-dropdown .nav-link-dropdown-news{
+       height: 80px; 
+    }
+    .nav-link-wrap{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 63px;
+        border-top:4px solid rgb(0,160,189);
+        background-color: #292929;
+        min-width: 200px;
+        margin: 6px;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, .2);
+        transition: opacity .5s cubic-bezier(0.06, 0.81, 0, 0.98) 0s, visibility 0s;
+    } 
+        .nav-link-dropdown:hover .nav-link-wrap,.nav-link-dropdown:focus .nav-link-wrap{
+            display: flex;
+        }
+        .nav-link-wrap li {
+            margin: 5px 16px;
+        }
+        .nav-link-wrap li:first-of-type{
+            margin: 16px 16px 5px;
+        }
+        .nav-link-wrap li:last-of-type{
+            margin: 5px 16px 16px;
+        }
+        .nav-link-wrap li a{
+            margin: 0;
+            padding: 8px 16px 12px;
+            font-size: 13px;
+            filter: brightness(80%);
+            font-weight: 500;
+            line-height: 16px;
+            text-align: left;
+        }
+        .nav-link-wrap li:hover a, .nav-link-wrap li:focus a{
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            filter: brightness(100%);
+            
+        }
     /*Nav bar rightside*/
-.rightsidebar{
+.rightsidebar{          
     display: flex;
     margin-left: auto;
     padding-right:16px ;
     flex-direction: row;
-    
+        
 }
+    .search-box{
+        position: relative;
+        display: flex;
+        padding:12px;
+        width: 43px;
+        border-radius:15px;
+        background: #292929;
+        cursor: pointer;
+    }
+        .search-input{
+            background: #292929;
+            border: none;
+            outline: none;
+            width:10% ;
+        }
+        .search-icon{
+            position: absolute;
+            top:20%;
+            left: 100%;
+            transform: translate(-100%);
+        }
+    
 .globeIcon{
     height: 32px;
     width: 32px;
     margin: 6px;
 }
-.globeIcon svg{
-    width: 18px;
-}
-.globeIcon:hover{
-    border-radius: 6px;
-    background-color: #292929;
-}
+    .globeIcon svg{
+        width: 18px;
+    }
+    .globeIcon:hover ,.globeIcon:focus{
+        border-radius: 6px;
+        background-color: #292929;
+    }
 .burgerNav{
     display: none;
 }
@@ -224,6 +269,7 @@ a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,
 .nav-btn a{
     display: flex;
     justify-content: center;
+    width: 81px;
     padding:8px 16px;
     color: black;
     background-color: #0BC4E2;
@@ -234,10 +280,6 @@ a:hover .riotgameslogo,a:hover .mainMenuDownNonHover svg,a:focus .riotgameslogo,
 }
 
 /*main*/
-main{
-    
-
-}
 span{
     display: flex;
     flex-direction: column;
@@ -253,32 +295,29 @@ span{
     position: relative;
     overflow: hidden;
     min-height: 50vh;
-    background: linear-gradient(to top, rgb(10, 20, 40) 0%, transparent 100%) center bottom / 100% 50% no-repeat;
+    
 }
 
-.bg{
-    
-    
-   background-color: black;
-    
-}
 .bg video{
     position: absolute;
+    
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%,-50%);
     min-width: 100%;
     overflow: hidden;
     
 }
     /*main logo*/
-.overlay{                /*.....................*/
+.overlay{     
+    width: 100%;
+    background: linear-gradient(to top, rgb(10, 20, 40) 0%, transparent 100%) center bottom / 100% 50% no-repeat;        
     position: relative;
     display: flex;   
     align-items: center;
-    
     justify-content: center;
     height: 100%;
+    
 }
 .League-logo{
     display: flex;
@@ -301,7 +340,6 @@ span{
 }
 .League-logo .button-letplay{
     color: black;
-    margin-top:32px;
     outline: rgb(255, 255, 255) solid 1px;       /*เส้นนอกborder*/
     outline-offset: 3px;                            /*ระยะห่างระหว่างborder -> เส้นนอกborder*/
     line-height: 26px;
@@ -309,68 +347,56 @@ span{
 }
 
     /*season*/
-#season{
-    display: flex;
+#season{ 
     height: 640px;
     overflow: hidden;
-    position: relative;
-    align-items: center;
 }
-
-#season .bg-img{
+#season .bg-img{                                        /*season bg*/
     background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d07912c88cdcd3c15298e88cedd2bb801528a305-1680x560.jpg?auto=format&fit=fill&q=80&h=560');
     position: relative;
+    display: flex;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    
-    
-    
-}
-
-.bg-img p{
-    color:#f9f9f9;
-    font-family: 'Beaufort for LOL', sans-serif;
-    
-    
 }
 .overlay-season{
+    position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-self: center;
     width: 50%;
     text-align: left;
-    position: absolute;
     padding-left: max(50px,5%);
 }
-.supertitle{
-    margin-bottom: 8px;
-    font-weight: 700;
-    font-size: 24px;
-    font-style: italic;
-    
-    
+.bg-img p{                                                                      /*season text*/
+    color:#f9f9f9;
+    font-family: 'Beaufort for LOL', sans-serif;
 }
-.title{
-    font-weight: 700;
-    font-size: 48px;
-    margin-bottom: 16px;
-    font-style: italic;
-    overflow-wrap: break-word;
-    
-    
-}
-.description{
-    margin-bottom: 32px;
-    font-style: none ;
-    font-family: Spiegel, sans-serif ;
-    font-size: 18px;
-}
+    .supertitle{
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 24px;
+        font-style: italic;
+        
+        
+    }
+    .title{
+        font-weight: 700;
+        font-size: 48px;
+        margin-bottom: 16px;
+        font-style: italic;
+        overflow-wrap: break-word;
+        
+        
+    }
+    .description{
+        margin-bottom: 32px;
+        font-style: none ;
+        font-family: Spiegel, sans-serif ;
+        font-size: 18px;
+    }
 .button-watch{
     display: flex;
     width: fit-content;
@@ -388,7 +414,6 @@ span{
     padding: 48px;
 }
 .news-header{
-    
     font-size: 32px;
     line-height: 40px;
     word-break: break-word;
@@ -405,46 +430,62 @@ span{
     
 }
 
-.wrapper{
-    
+.wrapper{                                         /*news  ol*/
     display: flex;
     gap: 1.5rem;
     padding: 0;
     margin: 0;
     width: 100%;
     list-style: none;
-    
-    
-    
-    
+
 }
 .wrapper li {
    flex: 1 0 auto;
    width: 33.3%;
 }
     /*card*/
-.card{
+.card{                                              
     background-color: #f9f9f9;
     overflow: hidden;
     
 }
 .card-newsvideo {
-
+    display: flex;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-newsvideo img{
-    width: 100%;
-    transition: transform 0.2s ease-in-out;
-}
-.card:hover .card-newsvideo img{
-    transform: scale(1.1);
+
+        /*card icon */
+    .card-newsvideo img{
+        width: 100%;
+        transition: transform 0.2s ease-in-out;
+    }
+    li:first-of-type  .card-newsvideo {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    li:first-of-type .play-news-icon{
+        background-image: url(/images/link-square.svg);
+    }
+    .play-news-icon{
+        position: absolute;
+        background-image: url("/images/player-square.svg");
+        z-index: 100;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+    }
+    .card:hover .card-newsvideo img,.card:focus .card-newsvideo img{
+        transform: scale(1.1);
+        
+    }
+
     
-}
 
-    
-
-.card-header{
+.card-header{                                           /*news header text*/
     display: flex;
     font-family: Spiegel, sans-serif;
     font-weight: 400;
@@ -464,13 +505,18 @@ span{
     font-size: 14px;
     line-height: 16px;
 }
-.stick{                            /*.....................*//*.....................*//*.....................*//*.....................*/
+.stick{      
+    display: flex;                      
+    align-self: center;
+    width: 1px;
+    height: 14px;
     background-color: rgb(204, 204, 204);
+   
     margin: 0px 8px;
     
 }
 
-.card-title{
+.card-title{                    /*news  text*/
     white-space: normal;
     font-size: 22px;
     line-height: 32px;
@@ -497,88 +543,83 @@ span{
     background-size: cover;
     padding: 48px;
     
-    /* margin:0 5%;  1920width */
+    
 }
-.icon-tab{
+
+.icon-tab{                                              /*icon champion layout*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "tabs media";
     
     gap: 32px;
     padding: 0 auto;
 }
-.icon-header{
+.icon-header{                               /*icon champion header*/
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
     text-align: center;
     margin-bottom: 24px;
 }
 
-.icon-header .supertitle{
-    font-style: normal;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 28px;
-    color: rgb(10, 20, 40);
-}
-.icon-header .title{
-    font-size: 66px;
-    color: rgb(10, 20, 40);
-}
-.icon-header .description{
-    font-size: 20px;
-    line-height: 26px;
-    color: rgb(10, 20, 40);
-}
-.icon-link {
-    display: flex;
-    justify-content: center;         /*สำรวจแชมเปี้ยนตัวอื่น ๆ*/
-    gap:16px;
-    width: 100%;
-    margin-bottom: 48px;
-    font-size: 20px;
-}
-.icon-link .button-watch ~ .button-watch{
-    padding: 19px 32px;
-    background-color: #59C1DE;                       /*เล่นเลย*/
-}
+    .icon-header .supertitle{
+        font-style: normal;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        color: rgb(10, 20, 40);
+    }
+    .icon-header .title{
+        font-size: 66px;
+        color: rgb(10, 20, 40);
+    }
+    .icon-header .description{
+        font-size: 20px;
+        line-height: 26px;
+        color: rgb(10, 20, 40);
+    }
+    .icon-link {
+        display: flex;
+        justify-content: center;         /*สำรวจแชมเปี้ยนตัวอื่น ๆ*/
+        gap:16px;
+        width: 100%;
+        margin-bottom: 48px;
+        font-size: 18px;
+    }
+    .icon-link .button-watch ~ .button-watch{
+        padding: 19px 32px;
+        background-color: #59C1DE;                       /*เล่นเลย*/
+    }
 
 
-.icon-header{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
 .icontab-content{
    width: 100%;
-
-}
-.icon-scoll-tab{
-
-  
 }
 .iconwrapper{
     display:flex;
     gap: 8px;
 }
-.iconwrapper .champ-card-icon{
+.iconwrapper .champ-card-icon{                                   /*icon*/
     display: flex;
-    
     scroll-snap-align: start;
     filter: brightness(50%);
     flex-direction: column;
-    align-items: center;      /*label มาอยู่ตรงกลางicon*/
+    align-items: center;                /*label มาอยู่ตรงกลางicon*/
     height: 110px;
     width: 100%;
     
 }
-
-
-.iconwrapper::-webkit-scrollbar{
-    display: none;
-    visibility: hidden;
+.champ-card-icon:hover, .map-icon:hover .champ-card-icon:focus, .map-icon:focus{                             /*icon:hover*/
+    display: flex;
+    transition: all 0.2s ease-in;
+    transform: scale(1.1);
 }
+.champ-card-icon:first-of-type{
+    filter: brightness(100%);
+    transform: none;
+    transition: none;
+}
+
 
 .champ-card-icon:active {
     filter: brightness(50%);
@@ -592,25 +633,16 @@ span{
 
 .label-champ{                       /* texticonchamp */
     margin-top: 24px;
-   
     font-weight: bold;
 }
 
 
-
-
-
-
-
-
+         /* champion pic*/
 .icon-media-content{
     display: flex;
     justify-content: center;
-    
-    
 }
 .icon-media-content img{
-    display:flex;
     max-height: 736px;
     max-width: 736px;
     flex: 1 0 auto;
@@ -643,56 +675,53 @@ span{
     background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/a6f94cd5ed222d3b99e535f17cd9592d3c716bb5-3840x1616.png?auto=format&fit=fill&q=80&h=976);
     object-fit: cover;
     background-position: 50% 5%;
-    /* padding:0 5%; 1920width */
+    
     bottom: 50%;
 }
-.MediaproWrapper{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    padding: 24px;
-    background: linear-gradient(to top, rgb(10, 20, 40) 0%, transparent 100%) center bottom / 100% 50% no-repeat;
-    gap: 64px;
-}
+    .Mediaprolayout{
+        background: linear-gradient(to top, rgb(10, 20, 40) 0%, transparent 100%) center bottom / 100% 10% no-repeat;
+        
+    }
+    .MediaproWrapper{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 24px;
+        margin: 0 5%;
+        gap: 64px;
+    }
 
-.promo-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-}
-.promo-container .supertitle,.promo-container .title,.promo-container .description{
-    color: white;
-}
-.promo-container .supertitle{
-    margin-bottom: 8px;
-    font-size: 24px;
-    line-height: 32px;
-}
-.promo-container .title{
-    margin-bottom: 16px;
-    font-size: 80px;
-    line-height: 88px;
-}
-.promo-container .description{
-    margin-bottom: 48px;
-}
-.promo-container .button-watch{
-    margin-bottom: 76px;
-    font-size: 18px;
-    line-height: 26px;
-    
-}
+    .promo-container{                                                   /*text promote*/
+        display: flex;  
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
+    }
+        .promo-container .supertitle,.promo-container .title,.promo-container .description{
+            color: white;
+        }
+        .promo-container .supertitle{
+            margin-bottom: 8px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .promo-container .title{
+            margin-bottom: 16px;
+            font-size: 80px;
+            line-height: 88px;
+        }
+        .promo-container .description{
+            margin-bottom: 48px;
+        }
+        .promo-container .button-watch{
+            margin-bottom: 76px;
+            font-size: 18px;
+            line-height: 26px;
+            
+        }
 
 
-.Media{
-    display: flex;
-}
-.promo-media-content{
-    display: flex;
-}
-.promo-media-content img{
-    display: flex;
+.Media{                                                         /*media promote*/
     width: 100%;
 }
 /*map */
@@ -703,89 +732,92 @@ span{
 .layoutmap{
     background: linear-gradient(to bottom, rgb(10, 20, 40) 0%, transparent 100%) center top / 100% 50% no-repeat;
    
-}
-.mapwraper{
-    padding: 48px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-     gap: 16px;
-    align-items: center;
-     margin: 0 10%;
-}
+    }
+    .mapwraper{
+        padding: 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: center;
+        margin: 0 5%;
+    }
+        .title-container{                          /*text map */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            width: 100%;
+            padding: 24px;
+            
+        }
+            .title-container .supertitle{
+                font-weight: 400;
+                font-style: normal;
+                font-size: 22px;
+                line-height: 32px;
+            }
+            .title-container .title{
+                font-size: 64px;
+                line-height: 72px;
+            }
+            .title-container a{
+                margin-top: 32px;
+            }
+            .map-icon:first-of-type{
+                filter:brightness(100%);
+                transform: none;
+                transition: none;
+            }
+    .map-icon{
+        filter:brightness(50%);
 
-.map-container{
-   
-}
-.title-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    width: 100%;
-    padding: 24px;
-    
-}
-.title-container .supertitle{
-    font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
-    line-height: 32px;
-}
-.title-container .title{
-    font-size: 64px;
-    line-height: 72px;
-}
-.title-container a{
-    margin-top: 32px;
-}
+    }
+    .map-content{                  /* OL map */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap:8px;
+        margin-top: 32px;
+    }
+    .map-icon{                      /* li map */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 132px;
+    }
+    .map-icon img {                 /*  map icon */
+        width: 68px;
+        height: 68px;s
+    }
+    .map-icon .icon-media-lebel{     /*  map icon lebel */
+        color: white;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 500;
+        font-family: Spiegel, sans-serif;
+        margin: 0;
+        margin-top: 8px;
+        text-align: center;
+        
+    }
 
-.map-icon-container{
- 
 
-}
-.map-content{                  /* OL map */
-    display: flex;
-    flex-direction: row;
-   justify-content: center;
-    width: 100%;
-    gap:8px;
-    margin-top: 32px;
-}
-.map-icon{                      /* li map */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 132px;
-}
-.map-icon img {                 /*  map icon */
-    width: 68px;
-    height: 68px;
-}
-.map-icon .icon-media-lebel{     /*  map icon lebel */
-    color: white;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 500;
-    font-family: Spiegel, sans-serif;
-    margin: 0;
-    margin-top: 8px;
-    text-align: center;
-    
-}
-
-.media-map{
+    /*  map video */
+.media-map{                                     
     display: flex;
     align-items: center;
     flex-direction: column;
     
 }
 .media-map-video{
+    
     clip-path: circle(50%);
     width: 686px;
     border-radius: 50%;
     border: 1px solid rgb(200, 170, 110);
-    padding: 8px;
+    padding: 18px;
     margin-bottom: 48px ;
 }
 .media-map p{
@@ -826,8 +858,7 @@ footer{
     background-color: #111111;
     
 }
-.link-footer-wrap,.footer-riot-logo,.license{
-    
+.link-footer-wrap,.footer-riot-logo{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1067,7 +1098,7 @@ footer{
     display: none;
     }
     .nav-link{
-        display: none;
+    display: none;
     }
     .rightsidebar{
     display: flex;
@@ -1075,6 +1106,9 @@ footer{
     padding-right:16px ;
     flex-direction: row;
 
+    }
+    .search-box{
+        display: none;
     }
     .burgerNav{
     display: flex;
@@ -1127,6 +1161,9 @@ footer{
     .news-content-container{
         padding:24px 0;
     }
+    .play-news-icon{
+        display: none;
+    }
     .card-supertitle{
         font-weight: bold;
         color: #C8AA6C;
@@ -1140,22 +1177,22 @@ footer{
         margin: 0px 8px;
         
     }
-    .card-title{
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: bold;
-    }
-    .card-description{
-        font-size: 12px;
-        line-height: 18px;
-    }
-    .wrapper{
-        white-space: nowrap;
-    }
-    .wrapper li{
-        width: 100%;
-       
-    }
+        .card-title{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        .card-description{
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .wrapper{
+            white-space: nowrap;
+        }
+        .wrapper li{
+            width: 100%;
+        
+        }
     .progress-container {
         width: 85%;
     }
@@ -1168,6 +1205,7 @@ footer{
 
 
     /*champion*/
+    
     #champions{
     padding: 24px;
     
@@ -1224,7 +1262,9 @@ footer{
     padding: 0;
     font-size: 10px;
     }
-
+    .icon-media-content img{
+        width: 100%;
+    }
 
     .icon-media-lebel{                                                    /* media textใหญ่ */
     line-height: 28px;
@@ -1239,9 +1279,11 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
     padding: 24px;  
     gap: 32px;  
     }
+    
     .promo-container .supertitle{
     margin-bottom: 8px;
     font-size:  20px;
@@ -1256,18 +1298,22 @@ footer{
     font-size:  14px;
     line-height: 22px;
     }
-    /*map */
-    #map{
-       
+    .promo-media-content img{
+        width: 100%;
     }
-    .layoutmap{
-         
+    /*map */
+    .layoutmap{  
     padding: 24px;
     }
     .mapwraper{
         display: flex;
     flex-direction: column;
-    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    }
+    .map-container{
+        width: 100%;
     }
     .title-container{
     display: flex;
@@ -1275,8 +1321,8 @@ footer{
     align-items: center;
     color: white;
     width: 100%;
-    padding: 24px;
-    
+    padding: 0;
+   
     }
     .title-container .supertitle{
     font-size: 16px;
