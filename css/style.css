@@ -300,13 +300,11 @@ span{
 
 .bg video{
     position: absolute;
-    
     left: 50%;
     top: 60%;
     transform: translate(-50%,-50%);
     min-width: 100%;
     overflow: hidden;
-    
 }
     /*main logo*/
 .overlay{     
@@ -343,8 +341,8 @@ span{
     outline: rgb(255, 255, 255) solid 1px;       /*เส้นนอกborder*/
     outline-offset: 3px;                            /*ระยะห่างระหว่างborder -> เส้นนอกborder*/
     line-height: 26px;
-    
 }
+
 
     /*season*/
 #season{ 
@@ -379,8 +377,6 @@ span{
         font-weight: 700;
         font-size: 24px;
         font-style: italic;
-        
-        
     }
     .title{
         font-weight: 700;
@@ -388,8 +384,6 @@ span{
         margin-bottom: 16px;
         font-style: italic;
         overflow-wrap: break-word;
-        
-        
     }
     .description{
         margin-bottom: 32px;
@@ -480,7 +474,6 @@ span{
     }
     .card:hover .card-newsvideo img,.card:focus .card-newsvideo img{
         transform: scale(1.1);
-        
     }
 
     
@@ -497,7 +490,6 @@ span{
     color: #000;
 }   
 .card-supertitle{
-   
     font-weight: bold;
     color: #C8AA6C;
 }
@@ -511,9 +503,7 @@ span{
     width: 1px;
     height: 14px;
     background-color: rgb(204, 204, 204);
-   
     margin: 0px 8px;
-    
 }
 
 .card-title{                    /*news  text*/
@@ -542,14 +532,11 @@ span{
     background-repeat: no-repeat;
     background-size: cover;
     padding: 48px;
-    
-    
 }
 
 .icon-tab{                                              /*icon champion layout*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
     gap: 32px;
     padding: 0 auto;
 }
@@ -561,7 +548,6 @@ span{
     text-align: center;
     margin-bottom: 24px;
 }
-
     .icon-header .supertitle{
         font-style: normal;
         font-size: 24px;
@@ -628,7 +614,6 @@ span{
     display: flex;
     justify-content: center;
     width: 100%;  
-   
 }
 
 .label-champ{                       /* texticonchamp */
@@ -675,7 +660,6 @@ span{
     background-image: url(https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/a6f94cd5ed222d3b99e535f17cd9592d3c716bb5-3840x1616.png?auto=format&fit=fill&q=80&h=976);
     object-fit: cover;
     background-position: 50% 5%;
-    
     bottom: 50%;
 }
     .Mediaprolayout{
@@ -731,7 +715,6 @@ span{
 }
 .layoutmap{
     background: linear-gradient(to bottom, rgb(10, 20, 40) 0%, transparent 100%) center top / 100% 50% no-repeat;
-   
     }
     .mapwraper{
         padding: 48px;
@@ -747,8 +730,7 @@ span{
             align-items: center;
             color: white;
             width: 100%;
-            padding: 24px;
-            
+            padding: 24px; 
         }
             .title-container .supertitle{
                 font-weight: 400;
@@ -800,7 +782,6 @@ span{
         margin: 0;
         margin-top: 8px;
         text-align: center;
-        
     }
 
 
@@ -863,8 +844,6 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-    
 }
 .footer-bar .link-footer-wrap{       /* first footer-bar*/
     padding: 24px ;
@@ -913,8 +892,6 @@ footer{
     text-transform: uppercase;
     padding: 8px 16px;
     display: block;
-   
-   
 }
 
 @media (max-width: 1024px) {
@@ -950,7 +927,6 @@ footer{
     /*news*/
     #new{
         margin: 32px;
-        
     }
     .news-content-container{
         display: flex;
@@ -978,12 +954,10 @@ footer{
     }
    
     .card-newsvideo img{
-        
         width: 100%;
     }
     .news-header{
     font-size: 24px;
-   
     }
 
     .card-supertitle{
@@ -1026,11 +1000,8 @@ footer{
     .progress-container {               /* หลอดcontrol */
     width: 85%;
     flex: 1 1 0%;
-  
     height: 2px;
     background: #ccc;
-    
-    
     }
 
     .progress-bar {                      /* หลอดcontrolทับ */
@@ -1040,7 +1011,6 @@ footer{
     }
    
     .arrow-btn button {      /* ลูกศรcontrolทับ */
-    
     visibility: visible;
     background: none;
     border: none;
@@ -1053,7 +1023,6 @@ footer{
     cursor: not-allowed; 
     }
     .arrow-btn .arrow-btn-left{
-       
        margin-right: 8px;
     }
 }  
